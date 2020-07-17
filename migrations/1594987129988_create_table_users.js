@@ -1,0 +1,4 @@
+module.exports = {
+       "up": "CREATE TABLE `tb_faculty` (  `id` int(11) NOT NULL AUTO_INCREMENT, `first_name` varchar(50) NOT NULL, `last_name` varchar(50) DEFAULT NULL, `email` varchar(80) NOT NULL,   `contact_number` varchar(20) NOT NULL, `dob` varchar(20) NOT NULL, `is_deleted` tinyint(1) NOT NULL DEFAULT '0', `creation_datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,`updation_datetime` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,   PRIMARY KEY (`id`),  UNIQUE KEY `email` (`email`),  UNIQUE KEY `contact_number` (`contact_number`),  KEY `is_deleted` (`is_deleted`)  )",
+       "down": ""
+}
